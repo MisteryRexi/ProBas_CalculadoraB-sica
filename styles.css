@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Configurar estructura*/
+* {
+    font-family: 'Space Mono', serif;
+    color: #fff;
+}
+
+body {
+    margin: 0;
+    background-color: #fd5b5b;
+}
+/*Lo que conforma a calculadora*/
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculadora {
+    display: grid;
+    grid-template-columns: repeat(4, 75px); /*El 4 son las columnas y 75 es el largo del boton*/
+    grid-template-rows: 160px repeat(5, 75px); /*Alto total con su largo*/
+    background-color: #fdc25b;
+    padding: 15px;
+    border-radius: 32px;
+    box-shadow: 15px 10px 0 5px #ae2323;
+}
+
+/*Botones */
+
+button {
+    cursor: pointer;
+    margin: 5px;
+    padding: 0;
+    border-radius: 32px;
+    font-size: 1.5em;
+    border: none;
+    background-color: #feb942;
+    box-shadow: 5px 5px 10px 3px #d1983640, -5px -5px 15px 3px #fece7a80;
+}
+
+button:active {
+    background-color: #f7b33c;
+}
+
+button:focus {
+    outline: none;
+}
+
+.col-2 {
+    grid-column: span 2; /*Expande el boton C*/
+}
+
+
+/*display*/
+
+.display {
+    grid-column: 1/ -1;
+    padding: 16px;
+    display: flex;
+    margin: 10px 10px 20px;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #474646;
+    border-radius: 32px;
+    text-align: right;
+    justify-content: space-between;
+    word-break: break-all;
+    box-shadow: 0 0 0 8px #47464633;
+}
+
+#valor-1 {
+    font-size: 1.5em;
+}
+
+#valor-2 {
+    font-size: 2em;
+}
